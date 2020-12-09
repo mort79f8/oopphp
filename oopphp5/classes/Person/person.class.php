@@ -10,7 +10,7 @@ class Person
     public $age;
 
     // constructor
-    public function __construct($name, $age)
+    public function __construct(string $name, int $age)
     {
         $this->name = $name;
         $this->age = $age;

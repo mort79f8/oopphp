@@ -1,4 +1,8 @@
 <?php
+
+// declare(strict_types=1) is used to make sure we can set the type of variables.
+// this is used when strict types are needed and to make sure the right types are used.
+declare(strict_types=1);
 include './includes/autoloader.inc.php';
 ?>
 
@@ -13,8 +17,13 @@ include './includes/autoloader.inc.php';
 
     <?php
     // here we are using a namespace infront of the Person class.
-    $person1 = new Person\Person("Daniel", 28);
-    echo $person1->getPerson();
+    // using a try-catch to check if it is the right type we use when .
+    try {
+        $person1 = new Person\Person("Daniel", 28);
+        echo $person1->getPerson();
+    } catch (TypeError $e) {
+        echo "Error!: " . $e->getMessage();
+    }
 
     echo "<br>";
 
