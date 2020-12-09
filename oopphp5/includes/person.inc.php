@@ -7,6 +7,8 @@ class Person
     private $eyeColor;
     private $age;
 
+    public static $drinkingAge = 21;
+
 
     // constructor
     public function __construct($name, $eyeColor, $age)
@@ -18,6 +20,7 @@ class Person
 
     // destructor
     // used to cleanup, example to close dbconnections
+    // runs at the end of a object (eg. when you are creating a object, this will run as the last function)
     public function __destruct()
     {
     }
@@ -31,5 +34,15 @@ class Person
     public function getName()
     {
         return $this->name;
+    }
+
+    public function getDA()
+    {
+        return self::$drinkingAge;
+    }
+
+    public static function setDrinkingAge($newDA)
+    {
+        self::$drinkingAge = $newDA;
     }
 }
