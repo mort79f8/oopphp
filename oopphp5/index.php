@@ -1,5 +1,5 @@
 <?php
-include 'includes/person.inc.php';
+include './includes/autoloader.inc.php';
 ?>
 
 <!DOCTYPE html>
@@ -12,10 +12,16 @@ include 'includes/person.inc.php';
 <body>
 
     <?php
-    $person1 = new Person("Daniel", "Blue", 28);
-    $person2 = new Person("Jens", "Red", 15);
-    echo $person1->getName();
-    echo $person1->getDA();
+    // here we are using a namespace infront of the Person class.
+    $person1 = new Person\Person("Daniel", 28);
+    echo $person1->getPerson();
+
+    echo "<br>";
+
+    $house1 = new House("Johndoeroad", 12);
+    echo $house1->getAddress();
+
+    ?>
 
 </body>
 
