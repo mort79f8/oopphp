@@ -12,15 +12,8 @@ include 'includes/person.inc.php';
 <body>
 
     <?php
-    $person1 = new Person();
-    $person1->setName("Daniel");
-    echo $person1->name;
-
-    echo '<br>';
-
-    $person2 = new Person();
-    $person2->setName("James");
-    echo $person2->name;
+    $person1 = new Person("Daniel", "Blue", 28);
+    echo $person1->getName();
     ?>
 
 </body>
