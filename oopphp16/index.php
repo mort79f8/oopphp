@@ -12,7 +12,10 @@ include 'includes/class-autoload.inc.php';
 </head>
 
 <body>
-
+    <?php
+    $testObj = new Test();
+    $testObj->setUsersStmt("John", "Doe", "1984-03-02");
+    ?>
 </body>
 
 </html>
